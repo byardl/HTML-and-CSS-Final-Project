@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size:110%;
+	background:#BBA07E;
+}
+nav {
+	height:auto;
+	background:lightgrey;
+    padding:10px;
+}
+nav a {
+    text-decoration:none;
+}
+nav ul li {
+	list-style:none;
+	border-bottom:black 2px solid;
+	border-right:black 2px solid;
+	text-align:center;
+	width:95%;
+	background:rgb(85, 85, 85);
+    padding: 2px;
+}
+nav ul li a:link, nav ul li a:visited {
+    color:white;
+   	text-decoration:none;
+}
+nav ul li a:hover, nav ul li a:active{
+	display: block;
+    background:#BBA07E;
+    color:black;
+}
+a:link, a:visited, a:hover,a:active{
+	color: green;
+	text-shadow: none;
+}
+header{
+	width:100%;
+	margin-top:0%;
+	background: lightgrey;
+	padding:5px;
+    border:5px solid black;
+    border-radius:25px;
+    margin-right:1%;	 
+}
+h1{
+	color:rgb(85, 85, 85);
+    text-shadow:1px 1px 1px black;	
+    text-align: center;
+    font-size:3em;
+	font-family: 'Montserrat', sans-serif;
+}
+h2{
+	color:rgb(85, 85, 85);
+    text-shadow:1px 1px 1px black;	
+    text-align:center;
+	font-family: 'Montserrat', sans-serif;
+    font-size:2.5em;
+}
+h3{
+	color:rgb(134, 105, 64);
+    text-shadow:1px 1px black;	
+    text-align:center;
+	font-family: 'Montserrat', sans-serif;	
+    font-size:2em;
+}
+section, div{
+	padding:10px;
+	margin-top:10px;
+    background-color:lightgrey;
+    border:5px solid black;
+    border-radius:25px;
+    margin-right:1%;
+    }
+footer {
+    color: black;
+    text-align: right;
+    padding: 15px;
+	width:100%;
+}
+img{
+	width:50%;
+    padding-right: 10px;
+    border:0px solid black;
+    border-radius:25px;
+
+}
+img span{
+	width:150px;
+}
+button{
+    padding:10px;
+    background:rgb(85, 85, 85);
+    color:white;
+}
+button:hover{
+    background: tan;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+.title{ grid-area:head; }
+.menu{ grid-area:nav; }
+.content{ grid-area:main; }
+.extra{ grid-area:aside; }
+.contact{ grid-area:foot; }
+
+.icon-bar {
+    width: auto; 
+	height: auto;
+    background-color:rgb(85, 85, 85) ;
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: white; /* Add a hover color */
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+			'nav nav nav'
+			'main main main'
+			'aside aside aside'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:4px;
+	}
+.box{
+		margin-right:5%;
+		margin-left:5%;
+	}
+	p.tip span{
+		padding-top:2%;
+		padding-right:2%;
+	}
+	header img{
+		display:none;
+	}
+}
+/* For tablets: */
+@media only screen and (min-width:481px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+			'main main main'
+			'nav nav nav'
+			'aside aside aside'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:5px;
+	}
+	#things{
+		display:none;
+	}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head head head head'
+			'main main main main nav nav'
+			'aside aside aside aside nav nav'
+			'foot foot foot foot foot foot';
+		grid-gap:0px;
+		padding:10px;
+	}
+	#things{
+		display:inline;
+	}
+	#extra img{
+		max-width:400px;
+	}
+	#extra{
+		font-size:1.3em;
+	}
+}
